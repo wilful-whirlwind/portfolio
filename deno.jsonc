@@ -1,0 +1,31 @@
+{
+  "tasks": {
+    "dev": "deno run　--allow-net"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [],
+    "strict": true
+  },
+  "fmt": {
+    "useTabs": false, // tabは使用しない
+    "lineWidth": 80,
+    "indentWidth": 4,
+    "semiColons": true, // セミコロンはつける
+    "singleQuote": true, // シングルクォートを利用する
+    "proseWrap": "preserve", // 改行位置は変更しない
+    "include": [
+      "Action/",
+      "Api/",
+      "Common/",
+      "Entity/",
+      "Logic/",
+      "Route/",
+      "Test/"
+    ],
+    "exclude": [],
+  },
+  "lock": true, // lockファイルを生成する
+  "importMap": "./import_map.json",
+  "lib": [ "deno.window" ]
+}

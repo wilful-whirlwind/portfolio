@@ -1,13 +1,14 @@
-import { serve } from "https://deno.land/std@0.202.0/http/server.ts";
+import { FrontController } from './Route/FrontController.ts';
+import { HttpMethod } from './Route/HttpMethod.ts';
 
 const handler = async (_request: Request): Promise<Response> => {
 
-    return new Response("Hallo Deno 7", {
-        status: 200,
-        headers: {
-            "content-type": "application/json",
-        },
-    });
+    const url = _request.url;
+    let urlParseArray = url.replace("http://", "").replace("https://", "").split("/");
+    urlParseArray[0] = "";
+    let method = _request.method;
+    const res= new FrontController(urlParseArray.join("/"), new HttpMethod("GET"));
+    return res.execute();
 };
 
-serve(handler);
+Deno.serve(handler);
