@@ -33,6 +33,11 @@ COPY ./_entry.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
-COPY ./main.ts /var/www/html/main.ts
+
+ENV APP_ROOT=/var/www/html
+VOLUME ${APP_ROOT}
+
+COPY ./ ${APP_ROOT}/
+
 
 CMD ["run", "--allow-net", "/var/www/html/main.ts"]
