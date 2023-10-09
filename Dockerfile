@@ -40,4 +40,4 @@ VOLUME ${APP_ROOT}
 COPY ./ ${APP_ROOT}/
 
 
-CMD ["run", "--allow-net", "/var/www/html/main.ts"]
+CMD ["run", "--allow-net", "--allow-read", "/var/www/html/main.ts"]

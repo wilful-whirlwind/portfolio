@@ -1,4 +1,5 @@
 import {Action} from "./Action.ts";
+import {html} from "../Front/top/top.tsx";
 
 export class ShowTopAction extends Action {
     public validate() {
@@ -6,10 +7,10 @@ export class ShowTopAction extends Action {
 
     public execute() {
         this.validate();
-        return new Response("this is top page.", {
+        return new Response(html, {
             status: 200,
             headers: {
-                "content-type": "application/json",
+                "content-type": "text/html; charset=utf-8",
             },
         });
     }
