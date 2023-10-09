@@ -1,6 +1,11 @@
 {
   "imports": {
-    "std/": "https://deno.land/std@0.202.0/",
-    "mod": "https://deno.land/x/jsx@v0.1.5/mod.ts"
+    "preact": "https://esm.sh/preact@10.15.1",
+    "preact/hooks": "https://esm.sh/preact@10.15.1/hooks",
+    "preact/jsx-runtime": "https://cdn.skypack.dev/preact/jsx-runtime?dts",
+    "preact/jsx-dev-runtime": "https://cdn.skypack.dev/preact/jsx-dev-runtime?dts",
+    "$fresh/": "https://deno.land/x/fresh@1.4.3/",
+    "$fresh_charts/": "https://deno.land/x/fresh_charts@0.3.1/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.2"
   }
 }

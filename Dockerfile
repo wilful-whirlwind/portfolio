@@ -38,4 +38,4 @@ COPY ./_entry.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
 
 WORKDIR /var/www/html
-ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh", "run", "--allow-net", "--allow-read", "./main.ts"]
+ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh", "run", "--allow-net", "--allow-read", "--allow-env", "./main.ts"]

@@ -5,7 +5,9 @@
   "compilerOptions": {
     "allowJs": true,
     "lib": [],
-    "strict": true
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/preact"
   },
   "fmt": {
     "useTabs": false, // tabは使用しない
