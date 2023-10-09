@@ -29,15 +29,13 @@ COPY --from=bin /deno /bin/deno
 
 COPY --from=tini /tini /tini
 
-COPY ./_entry.sh /usr/local/bin/docker-entrypoint.sh
-RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
-
-ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
-
 ENV APP_ROOT=/var/www/html
 VOLUME ${APP_ROOT}
 
 COPY ./ ${APP_ROOT}/
 
+COPY ./_entry.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
 
-CMD ["run", "--allow-net", "--allow-read", "/var/www/html/main.ts"]
+WORKDIR /var/www/html
+ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh", "run", "--allow-net", "--allow-read", "./main.ts"]
