@@ -14,30 +14,38 @@ export class FrontController {
         this.httpMethod = httpMethod;
     }
 
-    public execute(): Response {
+    public async execute(): Promise<Response> {
         let res = null;
         for (let i = 0; i < this.route.length; i++) {
+            if (this.path.indexOf("css") > 0) {
+                const css = await Deno.readTextFile("./Resource/assets/css" + this.path);
+                return new Response(css, {
+                    status: 200,
+                    headers: {
+                        "content-type": "text/css",
+                    },
+                });
+            }
+
             if (this.path !== this.route[i].path) {
                 continue;
             }
             if (this.httpMethod.val() !== this.route[i].httpMethod.val()) {
                 continue;
             }
+
             const actionName = this.route[i].actionName + "Action";
-            res = new ActionList[actionName]();
-            break;
+            const action = new ActionList[actionName]();
+            return action.execute();
         }
 
-        if (res === null) {
-            return new Response("not found", {
-                status: 404,
-                headers: {
-                    "content-type": "application/json",
-                },
-            });
-        }
+        return new Response("not found", {
+            status: 404,
+            headers: {
+                "content-type": "application/json",
+            },
+        });
 
-        return res.execute();
     }
 
     private setRoute(): RoutingInfo[] {

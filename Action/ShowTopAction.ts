@@ -8,7 +8,8 @@ export class ShowTopAction extends Action {
 
     public execute() {
         this.validate();
-        return new Response(renderToString(Home()), {
+        let home = new Home();
+        return new Response(renderToString(home.render()), {
             status: 200,
             headers: {
                 "content-type": "text/html; charset=utf-8",
