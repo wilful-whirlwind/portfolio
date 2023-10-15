@@ -4,13 +4,15 @@ export default class Header {
         return {
             header: {
                 display: "flex",
-                backgroundColor: "#bbb",
+                backgroundColor: "#d5d5d5",
                 color:"#353535",
                 height: "15%",
                 width: "100%",
-                fontFamily: "'Teko', sans-serif",
+                fontFamily: "'Lusitana', sans-serif",
                 fontSize: "20px",
-                position: "relative"
+                position: "relative",
+                marginBottom: 20,
+                borderRadius: 10
             },
             header_button: {
                 display: "flex",
@@ -31,7 +33,7 @@ export default class Header {
             title: {
                 marginLeft: 5,
                 marginTop: 0,
-                fontSize: 96,
+                fontSize: 84,
                 verticalAlign: "bottom"
             }
         }
@@ -43,23 +45,23 @@ export default class Header {
             <>
                 <div style={this.setStyles().header}>
                     <h1 style={this.setStyles().title}>
-                        masa's portfolio
+                        Masa's Portfolio
                     </h1>
                     <ul style={this.setStyles().header_button}>
                         <li style={this.setStyles().header_buttons}>
-                            top
+                            Top
                         </li>
                         <li style={this.setStyles().header_buttons}>
-                            about me
+                            About Me
                         </li>
                         <li style={this.setStyles().header_buttons}>
-                            works
+                            Works
                         </li>
                         <li style={this.setStyles().header_buttons}>
-                            contact
+                            Contact
                         </li>
                         <li style={this.setStyles().header_buttons}>
-                            blog
+                            Blog
                         </li>
                     </ul>
                 </div>
