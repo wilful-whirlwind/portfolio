@@ -92,6 +92,7 @@
     "https://deno.land/x/imagescript@v1.2.14/v2/util/mem.mjs": "4968d400dae069b4bf0ef4767c1802fd2cc7d15d90eda4cfadf5b4cd19b96c6d",
     "https://deno.land/x/jsx@v0.1.5/mod.ts": "24bb89837fda59c53c12a3c0e464378ca6de9b261dec1df57ba640b1cfed9611",
     "https://esm.sh/*preact-render-to-string@6.2.2": "9efdb61965a73c1c6006a9b9f36ce5305a97a678b271ad289c493e62d102352a",
+    "https://esm.sh/*preact-render-to-string@6.3.1": "8263a22307eb103f00e001c5d6b860926d83bd84abb42cba27538d313df79ca6",
     "https://esm.sh/preact@10.15.1": "2b79349676a4942fbcf835c4efa909791c2f0aeca195225bf22bac9866e94b4e",
     "https://esm.sh/preact@10.15.1/hooks": "185148362b77acad3fec1be815c42505a68c0a9b159948ed056a8612a0d4eb3b",
     "https://esm.sh/preact@10.18.1/jsx-runtime": "019f849249d70baa9aefb684a8f1fbc350a893beae719a60b6c80adf3463b073",
@@ -111,6 +112,7 @@
     "https://esm.sh/v128/red-agate-util@0.5.0/denonext/modules/convert/NumberPrecision.js": "ac3cf952b4ac33688223f96567fea8dca53f257cde247da7a464a19b8cf34f76",
     "https://esm.sh/v128/red-agate-util@0.5.0/denonext/modules/convert/TextEncoding.js": "9e88e2da12251eeb2515ef7b378bfab08759164f44d9948dbecd563a7a618f50",
     "https://esm.sh/v128/red-agate-util@0.5.0/denonext/modules/convert/WordWrap.js": "41050522a3f108b09d7304ae90200f42f62f190051b8c807501385f0733495cc",
-    "https://esm.sh/v133/preact-render-to-string@6.2.2/X-ZS8q/denonext/preact-render-to-string.mjs": "55283fc14993c67474322e5632215b2a06deeb7d4ff986031dcfff31a5b0b74c"
+    "https://esm.sh/v133/preact-render-to-string@6.2.2/X-ZS8q/denonext/preact-render-to-string.mjs": "55283fc14993c67474322e5632215b2a06deeb7d4ff986031dcfff31a5b0b74c",
+    "https://esm.sh/v134/preact-render-to-string@6.3.1/X-ZS8q/denonext/preact-render-to-string.mjs": "bcaceb8c3938310aee3dd4f7b6f2136cf0b2b890988c2e6679485e052e76e920"
   }
 }
