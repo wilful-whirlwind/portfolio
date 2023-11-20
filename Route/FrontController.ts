@@ -1,7 +1,7 @@
 import {RoutingInfo} from "./RoutingInfo.ts";
 import {HttpMethod} from "./HttpMethod.ts";
 import ActionList from "./ActionList.ts";
-
+import { decode } from "https://deno.land/x/imagescript@v1.2.14/mod.ts";
 
 export class FrontController {
     public route: RoutingInfo[];
@@ -24,6 +24,27 @@ export class FrontController {
                     headers: {
                         "content-type": "text/css",
                     },
+                });
+            }
+
+            if (this.path.indexOf("png") > 0 || this.path.indexOf("svg") > 0) {
+                const img = Deno.openSync("./Resource/assets/img" + this.path).readable;
+                let headers = {};
+                if (this.path.indexOf("png") > 0) {
+                    headers = {
+                        "content-type": "image/png"
+                    }
+                }
+                if (this.path.indexOf("svg") > 0) {
+                    headers = {
+                        "content-type": "image/svg+xml",
+                        "Vary": "Accept-Encoding"
+                    }
+                }
+
+                return new Response(img, {
+                    status: 200,
+                    headers: headers,
                 });
             }
 
@@ -51,6 +72,7 @@ export class FrontController {
     private setRoute(): RoutingInfo[] {
         let res = [];
         res.push(new RoutingInfo("/", new HttpMethod("GET"), "ShowTop"));
+        res.push(new RoutingInfo("/playground", new HttpMethod("GET"), "ShowPlayground"));
         return res;
     }
 }

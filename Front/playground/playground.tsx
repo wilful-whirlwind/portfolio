@@ -1,6 +1,6 @@
 import Main from "../template/main.tsx";
 
-export default class Top extends Main {
+export default class Playground extends Main {
     public setStyleContent() {
         const mainStyle = super.getContentStyle();
         return {
@@ -27,10 +27,12 @@ export default class Top extends Main {
                 display: "flex"
             },
             image: {
-                height: "30%",
-                width: "30%",
                 marginLeft: 10,
                 marginBottom: 10,
+                width: "100%",
+            },
+            imgLink: {
+                width: "30%",
             },
             intro: {
                 backgroundColor: mainStyle.mainBackGroundColor,
@@ -45,23 +47,21 @@ export default class Top extends Main {
             <>
                 <div style={this.setStyleContent().mainArea}>
                     <div style={this.setStyleContent().intro}>
-                        <h1 style={this.setStyleContent().title}>About Masa</h1>
-                        <div style={this.setStyleContent().article}>
-                            <img src={"ss.png"} style={this.setStyleContent().image}/>
-                            <ul style={this.setStyleContent().sentenceArea}>
-                                <li style={this.setStyleContent().sentence}>
-                                    Web Engineer.
-                                </li>
-                                <li style={this.setStyleContent().sentence}>
-                                    Project Manager.
-                                </li>
-                                <li style={this.setStyleContent().sentence}>
-                                    Retail Manager.
-                                </li>
-                                <li style={this.setStyleContent().sentence}>
-                                    Free Lance.
-                                </li>
-                            </ul>
+                        <h1 style={this.setStyleContent().title}>Playground</h1>
+                        <div>
+                            <div>
+                                <h2>
+                                    Mail Open Rate Culculator
+                                </h2>
+                                <div style={this.setStyleContent().article}>
+                                    <a href="https://www.google.co.jp/" style={this.setStyleContent().imgLink}>
+                                        <img src={"open_rate.svg"} style={this.setStyleContent().image} />
+                                    </a>
+                                    <p>
+                                        メールの開封率計算ツールです。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

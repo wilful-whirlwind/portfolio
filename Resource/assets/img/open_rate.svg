@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+    <defs>
+        <style>
+            .cls-1,.cls-2{
+                fill:none;
+            }
+            .cls-2{
+                stroke:#1e3050;
+                stroke-linecap:round;
+                stroke-linejoin:round;
+                stroke-width:4px;
+            }
+        </style>
+    </defs>
+<circle
+r="25"
+cx="120"
+cy="60"
+stroke="#336e33"
+stroke-width="15"
+fill="transparent"
+        transform="rotate(-90 90 90)"
+        ></circle>
+<text x="45" y="64" fill="#336e33" font-size="10px">
+100%
+</text>
+    <g id="レイヤー_2">
+        <g id="Rect_最後透明に_">
+            <rect class="cls-1" width="48" height="48"/>
+        </g>
+        <g id="icon" transform="translate(10,10) rotate(0)">
+            <polyline class="cls-2" points="36.79 12.13 24.13 2.13 5.13 17.13"/>
+            <polygon class="cls-2" points="43.13 17.13 43.13 41.13 5.13 41.13 5.13 17.13 24.13 32.13 43.13 17.13"/>
+        </g>
+    </g>
+</svg>

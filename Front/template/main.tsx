@@ -12,6 +12,7 @@ export default class Main {
         return {
             mainBackGroundColor: "#d5d5d5",
             fontFamily: "'Lusitana', sans-serif",
+            color: "#484848",
             paddingTop: 10,
             paddingRight: 10,
             paddingLeft: 10,

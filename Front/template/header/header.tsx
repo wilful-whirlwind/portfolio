@@ -5,7 +5,7 @@ export default class Header {
             header: {
                 display: "flex",
                 backgroundColor: "#d5d5d5",
-                color:"#353535",
+                color:"#484848",
                 height: "15%",
                 width: "100%",
                 fontFamily: "'Lusitana', sans-serif",
